@@ -13,6 +13,7 @@
 		E39556092F1944780017CAC8 /* WeatherIconManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E39556082F19446F0017CAC8 /* WeatherIconManager.swift */; };
 		E39556102F195A780017CAC8 /* NotesListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E395560F2F195A6E0017CAC8 /* NotesListViewModel.swift */; };
 		E39556122F1966D20017CAC8 /* AppTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = E39556112F1966CC0017CAC8 /* AppTheme.swift */; };
+		E39556142F196C980017CAC8 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = E39556132F196C890017CAC8 /* README.md */; };
 		E3B7A6E42F18EF8A0033BCA8 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3B7A6E12F18EF8A0033BCA8 /* ContentView.swift */; };
 		E3B7A6E52F18EF8A0033BCA8 /* WeatherNotesApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3B7A6E22F18EF8A0033BCA8 /* WeatherNotesApp.swift */; };
 		E3B7A6E62F18EF8A0033BCA8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E3B7A6E02F18EF8A0033BCA8 /* Assets.xcassets */; };
@@ -34,6 +35,7 @@
 		E39556082F19446F0017CAC8 /* WeatherIconManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherIconManager.swift; sourceTree = "<group>"; };
 		E395560F2F195A6E0017CAC8 /* NotesListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotesListViewModel.swift; sourceTree = "<group>"; };
 		E39556112F1966CC0017CAC8 /* AppTheme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppTheme.swift; sourceTree = "<group>"; };
+		E39556132F196C890017CAC8 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		E3B7A6D22F18EF7D0033BCA8 /* WeatherNotes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WeatherNotes.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E3B7A6E02F18EF8A0033BCA8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E3B7A6E12F18EF8A0033BCA8 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -96,6 +98,7 @@
 				E3B7A6E22F18EF8A0033BCA8 /* WeatherNotesApp.swift */,
 				E3B7A6EB2F18EFD10033BCA8 /* .gitignore */,
 				E3B7A6F72F18F8990033BCA8 /* Secrets.plist */,
+				E39556132F196C890017CAC8 /* README.md */,
 			);
 			path = WeatherNotes;
 			sourceTree = "<group>";
@@ -204,6 +207,7 @@
 			files = (
 				E3B7A6EC2F18EFDE0033BCA8 /* .gitignore in Resources */,
 				E3B7A6F82F18F8B20033BCA8 /* Secrets.plist in Resources */,
+				E39556142F196C980017CAC8 /* README.md in Resources */,
 				E3B7A6E62F18EF8A0033BCA8 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
