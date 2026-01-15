@@ -1,0 +1,56 @@
+# =========================
+# Xcode
+# =========================
+DerivedData/
+*.xcuserdata/
+*.xcuserstate
+*.xccheckout
+*.xcscmblueprint
+
+# Xcode build
+build/
+*.ipa
+*.dSYM.zip
+*.dSYM
+
+# =========================
+# Swift Package Manager
+# =========================
+.build/
+Packages/
+Package.resolved
+
+# =========================
+# CocoaPods
+# =========================
+Pods/
+Podfile.lock
+
+# =========================
+# Carthage
+# =========================
+Carthage/Build/
+
+# =========================
+# Fastlane
+# =========================
+fastlane/report.xml
+fastlane/Preview.html
+fastlane/screenshots
+fastlane/test_output
+
+# =========================
+# Logs & system
+# =========================
+*.log
+.DS_Store
+.idea/
+.vscode/
+
+# =========================
+# Secrets / Config
+# =========================
+*.env
+*.xcconfig
+Config.plist
+Secrets.plist
