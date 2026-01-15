@@ -2,6 +2,7 @@ import SwiftUI
 
 struct AddNoteView: View {
     @Environment(\.dismiss) private var dismiss
+    @Environment(\.colorScheme) private var scheme
     @StateObject private var viewModel: AddNoteViewModel
 
     init(viewModel: AddNoteViewModel) {
@@ -61,6 +62,8 @@ struct AddNoteView: View {
                     .disabled(viewModel.isSaving || viewModel.text.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty)
                 }
             }
+            .scrollContentBackground(.hidden)
+            .background(AppTheme.pageBackground(scheme))
         }
     }
 }

@@ -1,6 +1,8 @@
 import SwiftUI
 
 struct ContentView: View {
+    @Environment(\.colorScheme) private var scheme
+
     @StateObject private var viewModel: NotesListViewModel
     @State private var showAddNote = false
 
@@ -20,17 +22,22 @@ struct ContentView: View {
         NavigationStack {
             Group {
                 if viewModel.notes.isEmpty {
-                    VStack(spacing: 10) {
-                        Image(systemName: "note.text")
-                            .font(.system(size: 40))
-                            .foregroundStyle(.secondary)
-                        Text("No notes")
-                            .font(.headline)
-                        Text("Tap + to add your first note.")
-                            .font(.subheadline)
-                            .foregroundStyle(.secondary)
+                    VStack {
+                        ThemedCard {
+                            VStack(spacing: 10) {
+                                Image(systemName: "note.text")
+                                    .font(.system(size: 40))
+                                    .foregroundStyle(.secondary)
+                                Text("No notes")
+                                    .font(.headline)
+                                Text("Tap + to add your first note.")
+                                    .font(.subheadline)
+                                    .foregroundStyle(.secondary)
+                            }
+                            .frame(maxWidth: .infinity)
+                        }
+                        .padding()
                     }
-                    .padding()
                 } else {
                     List {
                         ForEach(viewModel.notes) { note in
@@ -39,9 +46,13 @@ struct ContentView: View {
                             } label: {
                                 NoteRowView(note: note)
                             }
+                            .listRowSeparator(.hidden)
+                            .listRowBackground(Color.clear)
                         }
                         .onDelete(perform: viewModel.delete)
                     }
+                    .listStyle(.plain)
+                    .scrollContentBackground(.hidden)
                 }
             }
             .navigationTitle("WeatherNotes")
@@ -50,11 +61,7 @@ struct ContentView: View {
                     if !viewModel.notes.isEmpty { EditButton() }
                 }
                 ToolbarItem(placement: .navigationBarTrailing) {
-                    Button {
-                        showAddNote = true
-                    } label: {
-                        Image(systemName: "plus")
-                    }
+                    Button { showAddNote = true } label: { Image(systemName: "plus") }
                 }
             }
             .onAppear { viewModel.load() }
@@ -73,6 +80,7 @@ struct ContentView: View {
                 AddNoteView(viewModel: AddNoteViewModel(weatherService: weatherService, storage: storage))
                     .onDisappear { viewModel.load() }
             }
+            .background(AppTheme.pageBackground(scheme))
         }
     }
 }
@@ -88,22 +96,24 @@ private struct NoteRowView: View {
     }()
 
     var body: some View {
-        HStack(spacing: 12) {
-            VStack(alignment: .leading, spacing: 4) {
-                Text(note.text)
-                    .font(.headline)
-                    .lineLimit(2)
-                Text(Self.df.string(from: note.createdAt))
-                    .font(.subheadline)
-                    .foregroundStyle(.secondary)
-            }
+        ThemedCard {
+            HStack(spacing: 12) {
+                VStack(alignment: .leading, spacing: 4) {
+                    Text(note.text)
+                        .font(.headline)
+                        .lineLimit(2)
+                    Text(Self.df.string(from: note.createdAt))
+                        .font(.subheadline)
+                        .foregroundStyle(.secondary)
+                }
 
-            Spacer()
+                Spacer()
 
-            HStack(spacing: 8) {
-                WeatherIconView(iconCode: note.weather.iconCode, size: 24)
-                Text("\(Int(note.weather.temperatureC.rounded()))°C")
-                    .font(.headline)
+                HStack(spacing: 8) {
+                    WeatherIconView(iconCode: note.weather.iconCode, size: 24)
+                    Text("\(Int(note.weather.temperatureC.rounded()))°C")
+                        .font(.headline)
+                }
             }
         }
         .padding(.vertical, 6)
@@ -111,6 +121,7 @@ private struct NoteRowView: View {
 }
 
 private struct NoteDetailView: View {
+    @Environment(\.colorScheme) private var scheme
     let note: Note
 
     private static let df: DateFormatter = {
@@ -122,13 +133,8 @@ private struct NoteDetailView: View {
 
     var body: some View {
         List {
-            Section("Note") {
-                Text(note.text)
-            }
-
-            Section("Date") {
-                Text(Self.df.string(from: note.createdAt))
-            }
+            Section("Note") { Text(note.text) }
+            Section("Date") { Text(Self.df.string(from: note.createdAt)) }
 
             Section("Weather") {
                 HStack(spacing: 12) {
@@ -148,8 +154,11 @@ private struct NoteDetailView: View {
             }
         }
         .navigationTitle("Details")
+        .scrollContentBackground(.hidden)
+        .background(AppTheme.pageBackground(scheme))
     }
 }
+
 
 #if DEBUG
 private final class NotesStorageInMemory: NotesStorageProtocol {
