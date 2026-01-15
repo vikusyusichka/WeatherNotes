@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E39556002F193A3E0017CAC8 /* NotesStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = E39555FF2F193A340017CAC8 /* NotesStorage.swift */; };
 		E3B7A6E42F18EF8A0033BCA8 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3B7A6E12F18EF8A0033BCA8 /* ContentView.swift */; };
 		E3B7A6E52F18EF8A0033BCA8 /* WeatherNotesApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3B7A6E22F18EF8A0033BCA8 /* WeatherNotesApp.swift */; };
 		E3B7A6E62F18EF8A0033BCA8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E3B7A6E02F18EF8A0033BCA8 /* Assets.xcassets */; };
@@ -18,9 +19,11 @@
 		E3B7A6F62F18F7A00033BCA8 /* WeatherService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3B7A6F52F18F7860033BCA8 /* WeatherService.swift */; };
 		E3B7A6F82F18F8B20033BCA8 /* Secrets.plist in Resources */ = {isa = PBXBuildFile; fileRef = E3B7A6F72F18F8990033BCA8 /* Secrets.plist */; };
 		E3B7A7012F18FAED0033BCA8 /* Secrets.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3B7A7002F18FAE70033BCA8 /* Secrets.swift */; };
+		E3B7A71F2F19388C0033BCA8 /* Note.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3B7A71E2F1938890033BCA8 /* Note.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		E39555FF2F193A340017CAC8 /* NotesStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotesStorage.swift; sourceTree = "<group>"; };
 		E3B7A6D22F18EF7D0033BCA8 /* WeatherNotes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WeatherNotes.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E3B7A6E02F18EF8A0033BCA8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E3B7A6E12F18EF8A0033BCA8 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -33,6 +36,7 @@
 		E3B7A6F52F18F7860033BCA8 /* WeatherService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherService.swift; sourceTree = "<group>"; };
 		E3B7A6F72F18F8990033BCA8 /* Secrets.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Secrets.plist; sourceTree = "<group>"; };
 		E3B7A7002F18FAE70033BCA8 /* Secrets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Secrets.swift; sourceTree = "<group>"; };
+		E3B7A71E2F1938890033BCA8 /* Note.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Note.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,6 +84,7 @@
 		E3B7A6E72F18EF8F0033BCA8 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				E3B7A71E2F1938890033BCA8 /* Note.swift */,
 				E3B7A6F32F18F76C0033BCA8 /* WeatherSnapshot.swift */,
 				E3B7A6F12F18F73E0033BCA8 /* OpenWeatherDTO.swift */,
 			);
@@ -104,6 +109,7 @@
 		E3B7A6EA2F18EFAF0033BCA8 /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				E39555FF2F193A340017CAC8 /* NotesStorage.swift */,
 				E3B7A7002F18FAE70033BCA8 /* Secrets.swift */,
 				E3B7A6F52F18F7860033BCA8 /* WeatherService.swift */,
 				E3B7A6EF2F18F6FD0033BCA8 /* NetworkClient.swift */,
@@ -187,10 +193,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				E3B7A6E42F18EF8A0033BCA8 /* ContentView.swift in Sources */,
+				E39556002F193A3E0017CAC8 /* NotesStorage.swift in Sources */,
 				E3B7A7012F18FAED0033BCA8 /* Secrets.swift in Sources */,
 				E3B7A6F22F18F7480033BCA8 /* OpenWeatherDTO.swift in Sources */,
 				E3B7A6F42F18F7780033BCA8 /* WeatherSnapshot.swift in Sources */,
 				E3B7A6EE2F18F6750033BCA8 /* WeatherError.swift in Sources */,
+				E3B7A71F2F19388C0033BCA8 /* Note.swift in Sources */,
 				E3B7A6E52F18EF8A0033BCA8 /* WeatherNotesApp.swift in Sources */,
 				E3B7A6F02F18F7160033BCA8 /* NetworkClient.swift in Sources */,
 				E3B7A6F62F18F7A00033BCA8 /* WeatherService.swift in Sources */,
