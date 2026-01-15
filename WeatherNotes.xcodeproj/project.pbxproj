@@ -11,6 +11,7 @@
 		E39556022F193B790017CAC8 /* AddNoteViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E39556012F193B6E0017CAC8 /* AddNoteViewModel.swift */; };
 		E39556062F193BAF0017CAC8 /* AddNoteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E39556052F193BA80017CAC8 /* AddNoteView.swift */; };
 		E39556092F1944780017CAC8 /* WeatherIconManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E39556082F19446F0017CAC8 /* WeatherIconManager.swift */; };
+		E39556102F195A780017CAC8 /* NotesListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E395560F2F195A6E0017CAC8 /* NotesListViewModel.swift */; };
 		E3B7A6E42F18EF8A0033BCA8 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3B7A6E12F18EF8A0033BCA8 /* ContentView.swift */; };
 		E3B7A6E52F18EF8A0033BCA8 /* WeatherNotesApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3B7A6E22F18EF8A0033BCA8 /* WeatherNotesApp.swift */; };
 		E3B7A6E62F18EF8A0033BCA8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E3B7A6E02F18EF8A0033BCA8 /* Assets.xcassets */; };
@@ -30,6 +31,7 @@
 		E39556012F193B6E0017CAC8 /* AddNoteViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNoteViewModel.swift; sourceTree = "<group>"; };
 		E39556052F193BA80017CAC8 /* AddNoteView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNoteView.swift; sourceTree = "<group>"; };
 		E39556082F19446F0017CAC8 /* WeatherIconManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherIconManager.swift; sourceTree = "<group>"; };
+		E395560F2F195A6E0017CAC8 /* NotesListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotesListViewModel.swift; sourceTree = "<group>"; };
 		E3B7A6D22F18EF7D0033BCA8 /* WeatherNotes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WeatherNotes.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E3B7A6E02F18EF8A0033BCA8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E3B7A6E12F18EF8A0033BCA8 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -118,6 +120,7 @@
 		E3B7A6E92F18EFA60033BCA8 /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
+				E395560F2F195A6E0017CAC8 /* NotesListViewModel.swift */,
 				E39556012F193B6E0017CAC8 /* AddNoteViewModel.swift */,
 			);
 			path = ViewModels;
@@ -213,6 +216,7 @@
 				E39556002F193A3E0017CAC8 /* NotesStorage.swift in Sources */,
 				E3B7A7012F18FAED0033BCA8 /* Secrets.swift in Sources */,
 				E39556092F1944780017CAC8 /* WeatherIconManager.swift in Sources */,
+				E39556102F195A780017CAC8 /* NotesListViewModel.swift in Sources */,
 				E3B7A6F22F18F7480033BCA8 /* OpenWeatherDTO.swift in Sources */,
 				E3B7A6F42F18F7780033BCA8 /* WeatherSnapshot.swift in Sources */,
 				E3B7A6EE2F18F6750033BCA8 /* WeatherError.swift in Sources */,
